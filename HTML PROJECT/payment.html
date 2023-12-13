@@ -1,0 +1,168 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.vertical-menu {
+  width: 500px;}
+.vertical-menu a {
+  background-color:lightgrey;
+  color: black;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  font-family: Verdana;
+  font-size:20;}
+.vertical-menu a:hover {
+  background-color: darkgoldenrod;}
+.vertical-menu a.active {
+  background-color: gold;
+  color: black;}
+.asd{display:none;}
+#pic{
+    border:solid ;
+    margin: 0px 500px;}
+.asf{display:none;}
+#cod{
+    border:solid ;
+    margin: 0px 500px;}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;}
+body{
+  overflow: hidden;}
+::selection{
+  background: rgba(26,188,156,0.3);}
+.wrapper{
+  width: 100%;
+  background:black;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);}
+.wrapper .title{
+  height: 90px;
+  background:darkgoldenrod;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;}
+.wrapper form{
+    padding: 30px 25px 25px 25px;}
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;}
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  background: black;
+  color:white;
+  transition: all 0.3s ease;}
+form .row input:focus{
+  border-color: black;
+  box-shadow: inset 0px 0px 2px 2px white;}
+form .row input::placeholder{
+  color: white;}
+.wrapper form .button input{
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: white;
+  border: 1px solid black;
+  cursor: pointer;}
+form .button input:hover{
+  background:darkgoldenrod ;}
+#cd{
+    margin: 0px 550px;} 
+.asg{display:none;}
+.ash{display:none;}
+#cod,#cd,#pic{margin-top: 100px;}
+#pic button:hover{background:darkgoldenrod;}
+#cod button:hover{background:darkgoldenrod;}
+</style>
+</head>
+<body style="background-color:#e6fffa">
+<center>
+<br>
+<div id="vl" >
+<h1 style="font-size:50; font-family: Verdana;">Payment Options</h1><br><br>
+<div class="vertical-menu">
+  <a href="#" class="active"><b>Choose your Payment Method</b></a>
+  <a  onclick="log1()">UPI/QR CODE</a>
+  <a  onclick="log3()">Credit/Debit Card</a>
+  <a  onclick="log2()">Cash On Delivery</a>
+</div>
+</div>
+<div id="pic" class="asd">
+    <h1 style="font-size:30; font-family: Verdana;">Scan this QR Code</h1>
+    <img style="width:300px;height:300px;" src="qr.jpg">
+    <br><br>
+    <button onclick="log4()" style="height:50px;width:200px;"><b style="font-size:medium;font-family:verdana;">Proceed and Pay</b></button><br><br>
+</div>
+<div id="cod" class="asf">
+    <h1 style="font-size:30; font-family: Verdana;">DoorStep Delivery</h1>
+    <img style="width:300px;height:300px;" src="https://img.freepik.com/free-vector/cash-delivery-concept-illustration_23-2148755957.jpg?w=2000"><br><br>
+    <button onclick="log4()" style="height:50px;width:200px;"><b style="font-size:medium;font-family:verdana;">Proceed and Pay</b></button><br><br>
+</div>
+<div id="cd" class="asg">
+    <div class="wrapper">
+        <div class="title"><span>Credit Debit</span></div>
+        <form onclick="log4()">
+          <div class="row">
+            <input type="text" placeholder="Card Number" required>
+          </div>
+          <div class="row">
+            <input type="text" placeholder="CVV" required>
+          </div>
+          <div class="row">
+            <input type="date" placeholder="CVV" required>
+          </div>
+          <div class="row button">
+            <input type="submit" value="Proceed and Pay">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="op" class="ash">
+      <h1 style="text-align:center;padding-top:100px;"><b>Your Order was successfully placed</b></h1>
+      <center><img style="height:300px;width:500px;"src="https://franchiseconceptsinc.com/indianapolis/wp-content/uploads/sites/168/2020/12/Thanks-For-Shopping-With-Us.jpg"></center>
+      <br><h1 style="text-align:center;">Shop Again</h1><br>
+      <div id="af"><button style="height:50px;width:200px;" onclick="location.href='file:///E:/HTML%20PROJECT/home.html'"><b>Home</b style="font-size:40;font-family:Verdana;"></button></div>
+      <br>
+    </div>
+</center>
+</body>
+<script>
+    function log1()
+    {
+      document.getElementById("vl").style.display = "none";
+      document.getElementById("pic").style.display = "block";
+    }
+    function log2()
+    {
+      document.getElementById("vl").style.display = "none";
+      document.getElementById("cod").style.display = "block";
+    }
+    function log3()
+    {
+      document.getElementById("vl").style.display = "none";
+      document.getElementById("cd").style.display = "block";
+    }
+    function log4()
+    {
+      document.getElementById("cd").style.display = "none";
+      document.getElementById("cod").style.display = "none";
+      document.getElementById("pic").style.display = "none";
+      document.getElementById("op").style.display = "block";
+    }
+</script>
+</html>
